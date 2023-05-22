@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Highlight Copy Extension",
+  "version": "1.0",
+  "description": "A Chrome extension to copy highlighted text and URL as a hyperlink.",
+  "permissions": ["clipboardWrite", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
